@@ -4,7 +4,11 @@ var multipart = require('connect-multiparty');
 var bodyParser = require('body-parser');
 var path = require('path');
 var fs = require('fs');
+var csv = require('csv'); 
 home=path.resolve("."); 
+var math = require('mathjs');
+
+// loads the csv module referenced above.
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -15,13 +19,20 @@ router.get('/', function(req, res) {
 router.post('/upload',multipart(), function(req, res) {
 
     var file = req.files.fileCSV,
-    name = file.name,
-    type = file.type,
     ruta = home + "/public/archivos/";
+    
+    var obj = csv(); 
+    var matrix=[];
+    obj.from.path(file.path).to.array(function (data) {
+        var Q = math.subset(data, math.index(math.range( 0,data.length ), math.range( 0,data[0].length-1 ) ) ); 
+        console.log(Q);
+    });
 
-    console.log(name,type,ruta);
+    
+
+
     fs.rename(file.path, ruta, function(err){
-        if(err) res.send("Ocurrio un error al intentar subir la imagen");
+        if(err) res.send("Ocurrio un error al intentar subir ");
     });
 
 
