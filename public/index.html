@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<!-- Jquery-->
+	<script src="./javascripts/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+	<link href="./stylesheets/bootstrap-combined.min.css" rel="stylesheet">
+	<script src="./javascripts/bootstrap.min.js"></script> 
+
+	<!-- Estilos -->
+	<link href="./stylesheets/estilo.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="page-header">
+			<h1>Redes Neuronales</h1>      
+		</div>
+
+		<div id="input" >
+
+			<form action="/upload" method="post" id="upload-form" enctype="multipart/form-data">
+				<fieldset>
+
+					<div class="row">
+						<div class="col-md-4">
+							<label>Seleccionar archivo: </label>
+						</div>
+						<div class="col-md-6">  
+							<input type="file" clas="filestyle" name="fileCSV" >
+						</div>
+					</div> 
+					<br>
+					<br><br>
+					<button id="button"  type="submit" class="btn btn-danger">Subir</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	
+</body>
+</html>

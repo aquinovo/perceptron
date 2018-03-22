@@ -1,0 +1,21 @@
+.container{
+  margin-top: 15px;
+}
+
+h1{
+  color: grey;
+}
+
+#upload-form{
+  margin-top: 40px;
+  border: solid 1px #CCC;
+  padding: 22px;
+  webkit-box-shadow: -3px 3px 6px #C7C3C3;
+  moz-box-shadow: -3px 3px 6px #C7C3C3;
+  box-shadow: -3px 3px 6px #C7C3C3;
+  width: 70%;
+}
+
+#upload-form input[type="file"]{
+	margin-bottom: 12px;
+}
